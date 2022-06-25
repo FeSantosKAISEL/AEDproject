@@ -1,6 +1,5 @@
 # AEDproject
 AED/2022: Projeto “Rendimento do trabalho principal” - Rio Grande do Sul
-
 RS <- read.csv2("C:\\Users\\SAMSUNG\\Downloads\\UF_RS (1).csv")
 RS
 
@@ -10,7 +9,7 @@ RS
 # 2 ----
 str(RS)
 
-# 
+#  
 
 RS<-RS[,-1]
 RS
@@ -34,5 +33,8 @@ RS<-RS[RS$Trab_semana == "sim",]
 # 7 ----
 RS$Rend_mensal[RS$Rend_mensal==999999999999]<-NA
 RS$Rend_mensal_pc[RS$Rend_mensal_pc==999999999999]<-NA
-
+ 
+ #Este valor eh utilizado em casos de auxencia de dados correspondentes à renda, neste caso, para 
+ # impedir que haja uma interferencia desse valor, tão discrepante, no calculo das medidas de tendencia central
+ # eh descartado e tranformando em NA ( valor faltante).
 
